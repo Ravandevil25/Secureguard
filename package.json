@@ -1,0 +1,48 @@
+{
+  "name": "secureguard",
+  "displayName": "SecureGuard",
+  "description": "Real-time security code analyzer that detects vulnerabilities and suggests fixes",
+  "version": "0.0.1",
+  "publisher": "Sauravsk2507",
+  "license": "MIT",
+  "repository": "https://github.com/sauravsk2507/secureguard",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Linters",
+    "Security"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "javascript",
+        "aliases": ["JavaScript", "js"]
+      },
+      {
+        "id": "typescript",
+        "aliases": ["TypeScript", "ts"]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/test-electron": "^2.3.8",
+    "typescript": "^5.3.3"
+  }
+}
