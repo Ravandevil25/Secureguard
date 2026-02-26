@@ -11,8 +11,7 @@
   },
   "categories": [
     "Other",
-    "Linters",
-    "Security"
+    "Linters"
   ],
   "activationEvents": [
     "onLanguage:javascript",
